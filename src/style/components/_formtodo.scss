@@ -1,0 +1,24 @@
+#formNewTask {
+  @include center-y;
+  flex-direction: column;
+  margin-bottom: 3em;
+  animation: slideUp 1s ease-out;
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  input#formNewTask-input {
+    box-shadow: 0 0 15px 4px $backTitle-color;
+  }
+  input#formNewTask-input:focus {
+    outline: 3px solid $prime-color;
+  }
+}

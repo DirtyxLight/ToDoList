@@ -1,0 +1,59 @@
+#toDoComponent-container {
+  display: flex;
+  margin-top: 3em;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 350px;
+  overflow: auto;
+  direction: rtl;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: ltr;
+    row-gap: 25px;
+    width: 30vw;
+    animation: fade 1.5s ease-in;
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+::-webkit-scrollbar {
+  margin-left: 10px;
+  width: 15px;
+  position: absolute;
+  left: 200;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $prime-color;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #604686;
+}

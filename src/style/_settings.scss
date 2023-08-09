@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../../public/fonts/PlayfairDisplay-Regular.otf);
+}
+
+@font-face {
+  font-family: "font-title";
+  src: url(../../public/fonts/Pusab/PUSAB___.otf);
+}
+
+$backTitle-color: #efabff;
+$backGround-color: radial-gradient(
+  circle,
+  rgba(232, 143, 181, 1) 0%,
+  rgba(221, 195, 246, 1) 70%
+);
+$title-color: #f0ffff;
+$prime-color: #8569b1;
+
+body {
+  margin: auto;
+  max-width: 1440px;
+  font-family: "font-1", "Roboto", "Helvetica Neue", sans-serif;
+  background: $backGround-color;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  margin: auto;
+  @include center-y;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-family: "font-title";
+  margin: 0;
+  padding: 0.45em 1em;
+  color: $title-color;
+  font-size: 5em;
+  font-style: italic;
+  letter-spacing: 5px;
+  text-shadow: 5px 6px 10px $backTitle-color;
+  animation: slideDown 1s ease-out;
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.toast-success {
+  font-family: "font-title" !important;
+  font-weight: bold;
+  background: #8569b1 !important;
+  box-shadow: 2px 2px 9px 2px $backTitle-color !important;
+  font-size: 28px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+p {
+  margin: 5px 10px;
+  width: 80%;
+  font-size: 14px;
+  font-weight: 900;
+  color: $prime-color;
+  cursor: pointer;
+}
+
+input [type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+input[type="text"] {
+  padding: 16px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: $prime-color;
+  border: none;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: 400ms;
+}
+
+i {
+  padding: 5px;
+  color: $prime-color;
+  font-size: 15px;
+  text-shadow: 2px 1px 1px $backTitle-color;
+}
+
+i:hover {
+  text-shadow: 2px 6px 1px $backTitle-color;
+  transform: translateY(-4px);
+  transform: scale(1.15);
+  transition: 400ms;
+}
+
+#chart {
+  width: 500px;
+  height: 250px;
+  top: 0;
+  position: sticky;
+  border: 2px solid $prime-color;
+  border-radius: 10px;
+  background-color: #f0ffff;
+  animation: slideRight 1s ease-out;
+
+  @keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
